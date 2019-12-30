@@ -18,8 +18,16 @@ var swapCase = function(string) {
 // ex. shiftLetters('hello') // => 'ifmmp'
 // ex. (shiftLetters('abcxyz') // => "bcdyz{"
 var shiftLetters = function(string) {
-  // code!
-};
+  var s = string.split('');
+  s.forEach(x => {
+    
+  var c = console.log(x.charCodeAt(x));
+  // console.log(x.fromCharCode(c))
+  });
+  };
+  
+  shiftLetters("Hello")
+
 
 
 
@@ -48,6 +56,21 @@ var shiftLetters = function(string) {
 // - 3 of diamonds 
 
 
+var cards = []
+var suits = ["clubs","diamonds","hearts","spades"]
+var values = ["ace","2","3","4","5","6","7","8","9","10","jack","queen","king"]
+suits.forEach(x => {
+values.forEach(y => {
+cards.push(y + " of " + x)});
+
+});
+
+
+console.log(cards)
+
+
+
+
 // B) Word Play
 // Create a form where users may enter a sentence.
 // Turn that sentence into an array using the split method.
@@ -57,3 +80,17 @@ var shiftLetters = function(string) {
 
 
 
+var arr = [];
+form = (sentence) => {
+var s = sentence.split(' ');
+// console.log(s);
+s.forEach(x => {
+if (x.length >= 3){
+  arr.push(x);
+}
+
+});
+console.log(arr.reverse());
+}
+
+form("i believe i can fly");
